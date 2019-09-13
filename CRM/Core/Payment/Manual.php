@@ -92,7 +92,7 @@ class CRM_Core_Payment_Manual extends CRM_Core_Payment {
     if ($paymentInstrument === 'Credit Card') {
       return ['credit_card_type', 'pan_truncation'];
     }
-    elseif (strstr($paymentInstrument, 'Check') || strstr($paymentInstrument, 'Cheque')) {
+    elseif (strstr($paymentInstrument, 'Check') || strstr($paymentInstrument, 'Cheque') || strstr($paymentInstrument, 'BMO-Provincial A/C 1061-876')) {
       return ['check_number'];
     }
     return [];
